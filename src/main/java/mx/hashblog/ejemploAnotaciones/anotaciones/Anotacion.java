@@ -5,18 +5,12 @@
  */
 package mx.hashblog.ejemploAnotaciones.anotaciones;
 
-import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
 
-/**
- *
- * @author david
- */
+// Indicamos en que contexto existira la anotacion
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE) //on class level
 public @interface Anotacion {
-    public String uso() default "";    
-    public int orden() default 0;
+    public String uso() default ""; // elemento uso y su valor por defecto
+    public int orden() default 0; // elemento orden y su valor por defecto
 }
